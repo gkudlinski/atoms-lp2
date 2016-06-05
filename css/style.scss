@@ -7,5 +7,53 @@
         margin: 0;
     }
     #enp-lpTest_mainWrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        border: 1px solid $cl-black;
+        .enp-lpTest_header {
+        }
+        .enp-lpTest_row {
+            &.is-primary {
+                &:after {
+                    display: block;
+                    height: 0;
+                    clear: both;
+                    content: " ";
+                    visibility: hidden;
+                }
+                .enp-lpTest_rowItem {
+                    &.is-primary {
+                        float: left;
+                        width: 50%;
+                        background-color: $cl-grey1;
+                        @include breakpoint(phone) {
+                            background-color: $cl-black;
+                            color: $cl-white;
+                        }
+                        @include breakpoint(tablet) {
+                            background-color: $cl-white;
+                            color: $cl-black;
+                        }
+                    }
+                    &.is-secondary {
+                        float: left;
+                        width: 50%;
+                        background-color: $cl-white;
+                        @include breakpoint(phone) {
+                            background-color: $cl-black;
+                            color: $cl-white;
+                        }
+                        @include breakpoint(tablet) {
+                            background-color: $cl-white;
+                            color: $cl-black;
+                        }
+                    }
+                }
+            }
+            &.is-secondary {
+            }
+        }
+        .enp-lpTest_footer {
+        }
     }
 }
